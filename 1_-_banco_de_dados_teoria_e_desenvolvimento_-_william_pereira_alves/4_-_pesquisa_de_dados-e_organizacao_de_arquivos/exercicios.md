@@ -14,4 +14,4 @@ R: Consiste em criar uma tabela de indices que contem os valores dos elementos e
 
 ## 4 - Quais sao as tecnicas utilizadas no armazenamento e organizacao de arquivos em disco?
 
-R: Tecnicas de organizacao sequencial, indexada e direta.
+R: Arquivo HEAP (Heape file), Arquivo Classificado, Hashing e Arvores-B.
