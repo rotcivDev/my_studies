@@ -1,0 +1,78 @@
+# chmod
+-----------
+d rwx rwx rwx
+dir | file, owner, group, others
+
+## example
+  chmod -R u=rwx,g=,o= DIRECTORY
+
+## add | remove executable permission
+  chmod +x genids.sh
+  chmod -x genids.sh
+
+# chown
+## example
+  sudo chown -R root contacts
+
+Let's break down this command:
+
+  sudo - Run as the root user
+  chown - Command to change the owner
+  -R - "Recursive", meaning also apply the changes to everything inside the directory
+  root - The name of the new owner
+  contacts - The directory to change the owner of
+
+
+# which
+show the path of the bin
+
+# shebang
+The format of a shebang is:
+  #! interpreter [optional-arg]
+
+# env vars
+## example
+  export NAME="Lane"
+  echo $NAME
+  # Lane
+
+can also temporarily set a variable for a single command, instead of exporting it
+(exporting means the variable will persist until you close the shell).
+
+For example:
+  WARN_MESSAGE="this works too" ./warn.sh
+
+to unset:
+  unset ENV_VAR_NAME
+  export ENV_VAR_NAME=""
+
+# path
+Add a directory to your PATH variable. You'll need to add the absolute path, not the relative path.
+You can get the absolute path by running pwd in the worldbanc/private/bin directory, or by using the
+realpath command.
+
+To add a directory to your PATH without overwriting all of the existing directories, use the export
+command and reference the existing PATH variable:
+
+  export PATH="$PATH:/path/to/new"
+
+# exit codes
+Exit codes (sometimes called "return codes" or "status codes") are how programs communicate
+back whether they ran successfully or not.
+
+0 is the exit code for success. Any other exit code is an error. 9 times out of 10, if a non-zero
+exit code is returned (meaning an error) it will be 1, which is the "catch-all" error code.
+
+Programs that call other programs use error codes to figure out if execution was successful.
+For example, if the Boot.dev server program exits with a non-zero exit code, we have another
+program that will automatically restart it and log the error.
+
+In a shell, you can access the exit code of the last program you ran with the question mark (?) variable.
+For example, if you run a program that exits with a non-zero exit code, you can see what it
+was with the echo command:
+
+## example
+  ls ~
+  echo $?
+  # 0
+

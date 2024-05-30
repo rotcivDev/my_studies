@@ -1,3 +1,3 @@
-# My studies 
+# My studies
 
-Repository intended for recording studies of books, courses, articles or any technological experimentation
+Repository intended for recording studies of books, articles and any technological experimentation
