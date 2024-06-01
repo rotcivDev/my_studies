@@ -76,3 +76,27 @@ was with the echo command:
   echo $?
   # 0
 
+# redirecting streams
+
+## Redirect stdout to a file
+  echo "Hello world" > hello.txt
+  cat hello.txt
+  # Hello world
+
+## Redirect stderr to a file
+  cat doesnotexist.txt 2> error.txt
+  cat error.txt
+  # cat: doesnotexist.txt: No such file or directory
+
+# piping
+The pipe operator is |. It's the character that looks like a vertical line.
+It's usually on the same key as the backslash (\) above the enter key.
+The pipe operator takes the stdout of the program on the left and "pipes"
+it into the stdin of the program on the right.
+
+## example
+  echo "Have you heard the tragedy of Darth Plagueis the Wise?" | wc -w
+  # 10
+  grep -R "Bob" PATH_TO_TRANSACTIONS_DIR --exclude-dir="backups" | wc -l
+  ps aux | grep malicious.sh
+
