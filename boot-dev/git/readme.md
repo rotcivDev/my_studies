@@ -153,3 +153,46 @@ In my experience, 90% of the time you will be using --global to set things like 
 ## Overriding
 
 If you set a configuration in a more specific location, it will override the same configuration in a more general location. For example, if you set user.name in the local configuration, it will override the user.name set in the global configuration.
+
+# Branch
+A branch is just a named pointer to a specific commit. When you create a branch, you are creating a new pointer to a specific commit. The commit that the branch points to is called the tip of the branch.
+Because a branch is just a pointer to a commit, they're lightweight and "cheap" resource-wise to create. When you create 10 branches, you're not creating 10 copies of your project on your hard drive.
+
+# Log Flags
+
+As you know, git log shows you the history of commits in your repo. There are a few flags I like to use from time to time to make the output easier to read.
+
+The first is --decorate. It can be one of:
+
+    short (the default)
+    full (shows the full ref name)
+    no (no decoration)
+
+Run git log --decorate=full. You should see that instead of just using your branch name, it will show the full ref name. A ref is just a pointer to a commit. All branches are refs, but not all refs are branches.
+
+Run git log --decorate=no. You should see that the branch names are no longer shown at all.
+
+The second is --oneline. This flag will show you a more compact view of the log. I use this one all the time, it just makes it so much easier to see what's going on.
+
+git log --oneline
+
+# Reset
+
+The git reset command can be used to reset any changes in the index (staged but not committed changes) and the worktree (unstaged and not committed changes).
+
+git reset --hard
+
+This is useful if you just want to discard all your current changes and go back to the last commit.
+
+I want to stress how dangerous this command can be. When you deleted the file, because it was tracked in Git, it was trivially easy to recover. However, if you have some changes that you do want to keep, running git reset --hard will delete them for good.
+
+Always be careful when using git reset --hard. It's a powerful tool, but it's also a dangerous one.
+Reset to a Specific Commit
+
+If you want to reset back to a specific commit, you can use the git reset --hard command and provide a commit hash. For example:
+
+git reset --hard a1b2c3d
+
+This will reset your working directory and index to the state of that commit, and all the changes made after that commit are lost forever.
+
+
