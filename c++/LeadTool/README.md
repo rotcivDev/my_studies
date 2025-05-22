@@ -12,24 +12,25 @@ A C++ CLI app to manage web leads, using PostgreSQL and Docker with layered arch
 - Infrastructure: DB interaction
 - SQL: Schema, fully decoupled
 
+```
 ┌────────────────────────────┐
-│ CLI I/O │ ◄── User Interface (CLI)
+│          CLI I/O           │ ◄── User Interface (CLI)
 └────────────┬───────────────┘
-▼
+             ▼
 ┌────────────────────────────┐
-│ Application │ ◄── App layer: command dispatch, control flow
+│        Application         │ ◄── App layer: command dispatch, control flow
 └────────────┬───────────────┘
-▼
+             ▼
 ┌────────────────────────────┐
-│ Services │ ◄── Business logic
+│          Services          │ ◄── Business logic
 └────────────┬───────────────┘
-▼
+             ▼
 ┌────────────────────────────┐
-│ Infrastructure │ ◄── Repositories & PostgreSQL
+│       Infrastructure       │ ◄── Repositories & PostgreSQL
 └────────────┬───────────────┘
-▼
+             ▼
 ┌────────────────────────────┐
-│ SQL Schema/Files │ ◄── Pure SQL queries
+│      SQL Schema/Files      │ ◄── Pure SQL queries
 └────────────────────────────┘
 
 weblead-tool/
@@ -52,6 +53,8 @@ weblead-tool/
 └── include/
 └── ...
 
+```
+
 ## Commands
 
 - add: Add a new lead
@@ -59,26 +62,6 @@ weblead-tool/
 - search: Find leads by keyword
 - delete: Remove a lead by ID
 - export: Save all leads as JSON
-
-## Build
-
-```bash
-cmake -Bbuild
-cmake --build build
-./build/weblead
-```
-
-## Docker
-
-Run the app:
-
-```bash
-docker-compose up --build
-```
-
-## Tests
-
-Run tests via `tests/test_cli.cpp` using Catch2
 
 ## License
 
