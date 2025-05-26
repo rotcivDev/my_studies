@@ -1,9 +1,9 @@
 services:
-  db:
+  pgdb:
     image: postgres:14
     restart: always
     environment:
-      POSTGRES_DB: webleads
+      POSTGRES_DB: db-studies
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
     volumes:
@@ -11,14 +11,14 @@ services:
     ports:
       - "5432:5432"
 
-  app:
-    build: .
-    depends_on:
-      - db
-    environment:
-      PG_CONN: "dbname=webleads user=user password=pass host=db"
-    stdin_open: true
-    tty: true
+#  app:
+#    build: .
+#    depends_on:
+#      - db
+#    environment:
+#      PG_CONN: "dbname=webleads user=user password=pass host=db"
+#    stdin_open: true
+#    tty: true
 
   pgadmin:
     image: dpage/pgadmin4

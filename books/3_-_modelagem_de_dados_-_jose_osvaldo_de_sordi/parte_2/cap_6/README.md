@@ -18,6 +18,10 @@ D) O sistema deve auxiliar o gestor do atendimento das mesas (maitre) na identif
 do salão está há mais tempo sem realizar um pedido, ajudando na supervisão e no direcionamento dos serviços de
 atendimento realizados pelos garçons.
 
+## MER
+
+![Modelo Entidade-Relacionamento](doc/mer.png)
+
 ## License
 
 MIT

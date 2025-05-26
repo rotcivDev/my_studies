@@ -98,30 +98,5 @@ bool LeadRepository::deleteById(int id) {
     }
 }
 
-// std::string LeadRepository::exportAsJson() {
-//     try {
-//         nlohmann::json j = nlohmann::json::array();
-//
-//         auto leads = getAll();
-//         for (const auto& lead : leads) {
-//             nlohmann::json leadJson;
-//             leadJson["id"] = lead.id;
-//             leadJson["name"] = lead.name;
-//             leadJson["email"] = lead.email;
-//             leadJson["phone"] = lead.phone;
-//             leadJson["source"] = lead.source;
-//             leadJson["status"] = lead.status;
-//             leadJson["created_at"] = lead.created_at;
-//
-//             j.push_back(leadJson);
-//         }
-//
-//         return j.dump(4);  // Pretty print with 4-space indentation
-//     } catch (const std::exception& e) {
-//         std::cerr << "Error exporting leads to JSON: " << e.what() << std::endl;
-//         return "[]";
-//     }
-// }
-
 } // namespace infrastructure
 } // namespace weblead
