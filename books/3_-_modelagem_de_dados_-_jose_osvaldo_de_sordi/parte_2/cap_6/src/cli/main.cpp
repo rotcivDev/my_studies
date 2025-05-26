@@ -6,16 +6,16 @@
 #include "infrastructure/lead_repository.h"
 #include "common/db_connection.h"
 
-int main(int argc, char* argv[]) {
+int main(const int argc, char* argv[]) {
     try {
         // Create dependencies
-        auto db_connection = std::make_shared<weblead::common::DBConnection>(
-            "postgresql://user:pass@db:5432/webleads");
+        auto db_connection = std::make_shared<acatamento_pedidos::common::DBConnection>(
+            "postgresql://user:pass@db:5432/acatamento_pedidos");
 
-        auto lead_repository = std::make_shared<weblead::infrastructure::LeadRepository>(db_connection);
-        auto lead_service = std::make_shared<weblead::services::LeadService>(lead_repository);
-        auto dispatcher = std::make_shared<weblead::app::Dispatcher>(lead_service);
-        auto cli = std::make_shared<weblead::cli::CLI>(dispatcher);
+        auto lead_repository = std::make_shared<acatamento_pedidos::infrastructure::LeadRepository>(db_connection);
+        auto lead_service = std::make_shared<acatamento_pedidos::services::LeadService>(lead_repository);
+        auto dispatcher = std::make_shared<acatamento_pedidos::app::Dispatcher>(lead_service);
+        const auto cli = std::make_shared<acatamento_pedidos::cli::CLI>(dispatcher);
 
         // Run the CLI
         if (argc > 1) {

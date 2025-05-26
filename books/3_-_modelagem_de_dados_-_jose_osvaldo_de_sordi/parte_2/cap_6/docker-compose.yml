@@ -3,7 +3,7 @@ services:
     image: postgres:14
     restart: always
     environment:
-      POSTGRES_DB: db-studies
+      POSTGRES_DB: acatamento_pedidos
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
     volumes:

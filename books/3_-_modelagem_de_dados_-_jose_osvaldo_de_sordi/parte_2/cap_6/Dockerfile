@@ -7,4 +7,4 @@ WORKDIR /app
 COPY . /app
 RUN cmake -Bbuild && cmake --build build
 
-CMD ["./build/weblead"]
+CMD ["./build/acatamento_pedidos"]

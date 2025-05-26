@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(WebLeadTool)
+project(acatamento_pedidosTool)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -9,6 +9,6 @@ file(GLOB SOURCES "src/**/*.cpp")
 file(GLOB HEADERS "include/**/*.h")
 
 
-add_executable(weblead ${SOURCES})
+add_executable(acatamento_pedidos ${SOURCES})
 
-target_link_libraries(weblead pqxx pq)
+target_link_libraries(acatamento_pedidos pqxx pq)

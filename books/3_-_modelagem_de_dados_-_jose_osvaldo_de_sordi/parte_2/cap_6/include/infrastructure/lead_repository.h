@@ -9,7 +9,7 @@
 #include <memory>
 #include "common/db_connection.h"
 
-namespace weblead {
+namespace acatamento_pedidos {
 namespace infrastructure {
 
 struct Lead {
@@ -46,4 +46,4 @@ private:
 };
 
 } // namespace infrastructure
-} // namespace weblead
+} // namespace acatamento_pedidos

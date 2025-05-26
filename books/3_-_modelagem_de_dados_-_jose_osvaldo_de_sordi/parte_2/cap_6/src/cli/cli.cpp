@@ -8,7 +8,7 @@
 #include <sstream>
 #include <vector>
 
-namespace weblead {
+namespace acatamento_pedidos {
     namespace cli {
 
         CLI::CLI(std::shared_ptr<app::Dispatcher> dispatcher)
@@ -31,7 +31,7 @@ namespace weblead {
         }
 
         void CLI::interactive() {
-            std::cout << "WebLead CLI - Interactive Mode\n";
+            std::cout << "acatamento_pedidos CLI - Interactive Mode\n";
             std::cout << "Type 'help' for available commands. Type 'exit' to quit.\n";
 
             std::string line;
@@ -74,4 +74,4 @@ namespace weblead {
         }
 
     } // namespace cli
-} // namespace weblead
+} // namespace acatamento_pedidos

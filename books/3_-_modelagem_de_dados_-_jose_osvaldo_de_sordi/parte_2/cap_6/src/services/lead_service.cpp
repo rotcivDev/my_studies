@@ -1,7 +1,7 @@
 #include "services/lead_service.h"
 #include <sstream>
 
-namespace weblead {
+namespace acatamento_pedidos {
     namespace services {
 
         LeadService::LeadService(std::shared_ptr<infrastructure::LeadRepository> lead_repository)
@@ -40,4 +40,4 @@ namespace weblead {
         }
 
     } // namespace services
-} // namespace weblead
+} // namespace acatamento_pedidos

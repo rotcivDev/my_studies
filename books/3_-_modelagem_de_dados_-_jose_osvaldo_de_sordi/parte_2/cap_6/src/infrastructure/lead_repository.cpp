@@ -1,7 +1,7 @@
 #include "infrastructure/lead_repository.h"
 #include <iostream>
 
-namespace weblead {
+namespace acatamento_pedidos {
 namespace infrastructure {
 
 LeadRepository::LeadRepository(std::shared_ptr<common::DBConnection> db_connection)
@@ -99,4 +99,4 @@ bool LeadRepository::deleteById(int id) {
 }
 
 } // namespace infrastructure
-} // namespace weblead
+} // namespace acatamento_pedidos

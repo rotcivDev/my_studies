@@ -2,7 +2,7 @@
 #include "infrastructure/lead_repository.h"
 #include <iostream>
 
-namespace weblead {
+namespace acatamento_pedidos {
 namespace app {
 
 Dispatcher::Dispatcher(std::shared_ptr<services::LeadService> lead_service)
@@ -116,4 +116,4 @@ void Dispatcher::showHelp() {
 }
 
 } // namespace app
-} // namespace weblead
+} // namespace acatamento_pedidos

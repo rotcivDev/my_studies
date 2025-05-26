@@ -6,7 +6,7 @@
 #include <string>
 #include <pqxx/pqxx>
 
-namespace weblead {
+namespace acatamento_pedidos {
 namespace common {
 
 class DBConnection {
@@ -23,4 +23,4 @@ private:
 };
 
 } // namespace common
-} // namespace weblead
+} // namespace acatamento_pedidos

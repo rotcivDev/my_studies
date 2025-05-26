@@ -5,7 +5,7 @@
 #include <memory>
 #include "services/lead_service.h"
 
-namespace weblead {
+namespace acatamento_pedidos {
 namespace app {
 
 class Dispatcher {
@@ -26,4 +26,4 @@ private:
 };
 
 } // namespace app
-} // namespace weblead
+} // namespace acatamento_pedidos

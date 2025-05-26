@@ -5,7 +5,7 @@
 #include "common/db_connection.h"
 #include <stdexcept>
 
-namespace weblead {
+namespace acatamento_pedidos {
     namespace common {
 
         DBConnection::DBConnection(const std::string& connection_string)
@@ -33,4 +33,4 @@ namespace weblead {
         }
 
     } // namespace common
-} // namespace weblead
+} // namespace acatamento_pedidos

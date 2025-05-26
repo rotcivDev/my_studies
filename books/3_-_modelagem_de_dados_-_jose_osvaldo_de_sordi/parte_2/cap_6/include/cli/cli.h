@@ -8,7 +8,7 @@
 #include <memory>
 #include "app/dispatcher.h"
 
-namespace weblead {
+namespace acatamento_pedidos {
 namespace cli {
 
 class CLI {
@@ -24,4 +24,4 @@ private:
 };
 
 } // namespace cli
-} // namespace weblead
+} // namespace acatamento_pedidos

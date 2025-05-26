@@ -5,7 +5,7 @@
 #include <memory>
 #include "infrastructure/lead_repository.h"
 
-namespace weblead {
+namespace acatamento_pedidos {
 namespace services {
 
 class LeadService {
@@ -23,4 +23,4 @@ private:
 };
 
 } // namespace services
-} // namespace weblead
+} // namespace acatamento_pedidos
