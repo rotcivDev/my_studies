@@ -8,17 +8,9 @@ services:
       POSTGRES_PASSWORD: pass
     volumes:
       - pgdata:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql
     ports:
       - "5432:5432"
-
-#  app:
-#    build: .
-#    depends_on:
-#      - db
-#    environment:
-#      PG_CONN: "dbname=webleads user=user password=pass host=db"
-#    stdin_open: true
-#    tty: true
 
   pgadmin:
     image: dpage/pgadmin4
@@ -29,9 +21,11 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - db
+      - pgdb
     volumes:
       - pgadmin_data:/var/lib/pgadmin
+      - ./doc/erd:/var/lib/pgadmin/storage/admin_admin.com
+      - ./pgadminservers.json:/pgadmin4/servers.json
 
 volumes:
   pgdata:

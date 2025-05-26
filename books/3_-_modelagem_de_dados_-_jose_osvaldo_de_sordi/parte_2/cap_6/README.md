@@ -20,7 +20,7 @@ atendimento realizados pelos garçons.
 
 ## MER
 
-![Modelo Entidade-Relacionamento](doc/mer.png)
+![Modelo Entidade-Relacionamento](doc/erd/erd.png)
 
 ## License
 
