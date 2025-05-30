@@ -8,7 +8,6 @@ include_directories(include)
 file(GLOB SOURCES "src/**/*.cpp")
 file(GLOB HEADERS "include/**/*.h")
 
-
 add_executable(weblead ${SOURCES})
 
 target_link_libraries(weblead pqxx pq)
